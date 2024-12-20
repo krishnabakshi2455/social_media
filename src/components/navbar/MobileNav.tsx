@@ -10,46 +10,41 @@ import { NavLink } from 'react-router-dom';
 
 const MobileNav = () => {
   return (
-    <div className='fixed bottom-0 p-2'>
-          <div className=' md:flex-col md:gap-24 flex' >
+    <div className='fixed bottom-0 p-2 w-full border-t-2'>
+          <div className='flex flex-row justify-around items-center w-full ' >
 
 
               <NavLink
                   to="/"
-                  className={({ isActive }) => isActive ? 'text-orange-600 flex items-center hover:text-orange-600 gap-4 duration-200 text-2xl font-semibold font-serif' : 'flex items-center gap-4 text-2xl font-semibold font-serif hover:text-orange-600 duration-200'}>
+                  className={({ isActive }) => isActive ? 'text-orange-600 flex items-center hover:text-orange-600 gap-4 duration-200 md:text-2xl font-semibold font-serif' : 'flex items-center gap-4 md:text-2xl font-semibold font-serif hover:text-orange-600 duration-200'}>
                   <House />
-                  <span className='text-3xl'>Home</span>
               </NavLink>
 
               <NavLink
                   to="/posts"
-                  className={({ isActive }) => isActive ? 'text-orange-600 flex items-center hover:text-orange-600 gap-4 duration-200 text-2xl font-semibold font-serif' : 'flex items-center gap-4 text-2xl font-semibold font-serif hover:text-orange-600 duration-200'}>
+                  className={({ isActive }) => isActive ? 'text-orange-600 flex items-center hover:text-orange-600 gap-4 duration-200 md:text-2xl font-semibold font-serif' : 'flex items-center gap-4 md:text-2xl font-semibold font-serif hover:text-orange-600 duration-200'}>
                   <MessageCircle />
-                  <span className='nav-text'>Chats</span>
               </NavLink>
 
               <NavLink
                   to="/notification"
-                  className={({ isActive }) => isActive ? 'text-orange-600 flex items-center hover:text-orange-600 gap-4 duration-200 text-2xl font-semibold font-serif' : 'flex items-center gap-4 text-2xl font-semibold font-serif hover:text-orange-600 duration-200'}>
+                  className={({ isActive }) => isActive ? 'text-orange-600 flex items-center hover:text-orange-600 gap-4 duration-200 md:text-2xl font-semibold font-serif' : 'flex items-center gap-4 md:text-2xl font-semibold font-serif hover:text-orange-600 duration-200'}>
                   <Bell />
-                  <span className='nav-text'>Notification</span>
               </NavLink>
 
-              <NavLink
-                  to="/create"
-                  className={({ isActive }) => isActive ? 'text-orange-600 flex items-center hover:text-orange-600 gap-4 duration-200 text-2xl font-semibold font-serif' : 'flex items-center gap-4 text-2xl font-semibold font-serif hover:text-orange-600 duration-200'}>
+              <div
+                  className="flex items-center hover:text-orange-600 gap-4 duration-200 md:text-2xl font-semibold font-serif">
                   <CirclePlus />
-                  <span className='nav-text'>Create</span>
-              </NavLink>
+              </div>
 
               <NavLink
                   to="/profile"
-                  className={({ isActive }) => isActive ? 'text-orange-600 flex items-center hover:text-orange-600 gap-4 duration-200 text-2xl font-semibold font-serif' : 'flex items-center gap-4 text-2xl font-semibold font-serif hover:text-orange-600 duration-200'}>
+                  className="bg-orange-600 text-white w-6 h-6 flex justify-center rounded-full items-center">
                   {/* <Avatar className="w-2 special-icon-1">
                                 {SingUpUsername ? SingUpUsername[0] : 'U'}
                             </Avatar> */}
                   {/* <span className='nav-text'>{SingUpUsername}</span> */}
-                  <span className='nav-text'>SingUpUsername</span>
+                  <span className=''>k</span>
 
               </NavLink>
 

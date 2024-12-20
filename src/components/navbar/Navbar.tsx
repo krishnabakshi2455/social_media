@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
 
     return (
         <>
-            <div className='border-r-2 md:border-black md:w-80 md:p-10 md:h-[100vh]'>
+            <div className='border-r-2 md:border-gray-300 md:w-80 md:p-10 md:h-[100vh]'>
 
 
                 <div className=' md:flex-col md:gap-24 md:flex hidden' >

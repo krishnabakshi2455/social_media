@@ -1,4 +1,4 @@
-import Navbar from "@/components/navbar/Navbar"
+import ContentContainer from "@/components/contentcontainer/ContentContainer"
 
 
 
@@ -7,7 +7,10 @@ function App() {
 
   return (
     <>
-    <Navbar/>
+      <ContentContainer />
+      {/* {
+        SingUppassword && SingUppassword && LoginEmail && Loginpassword ? <Home /> : <Authentication />
+      } */}
     </>
   )
 }

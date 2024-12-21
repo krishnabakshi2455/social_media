@@ -14,17 +14,13 @@ import MobileNav from './MobileNav';
 
 
 const Navbar: React.FC = () => {
-    // const SingUpUsername = useSelector((state: RootState) => state.AuthenticationSignup.username)
+   // const SingUpUsername = useSelector((state: RootState) => state.AuthenticationSignup.username)
 
 
     return (
         <>
-            <div className='border-r-2 md:border-gray-300 md:w-80 md:p-10 md:h-[100vh]'>
-
-
+            <div className='border-r-2 md:border-gray-300 md:w-64 md:py-10 px-5 md:h-[100vh]'>
                 <div className=' md:flex-col md:gap-24 md:flex hidden' >
-
-
                     <NavLink
                         to="/"
                         className={({ isActive }) => isActive ? 'text-orange-600 flex items-center hover:text-orange-600 gap-4 duration-200 text-2xl font-semibold font-serif' : 'flex items-center gap-4 text-2xl font-semibold font-serif hover:text-orange-600 duration-200'}>

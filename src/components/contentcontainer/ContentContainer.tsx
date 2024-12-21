@@ -3,7 +3,7 @@ import Navbar from "../navbar/Navbar"
 
 const Home = () => {
   return (
-      <div className='flex'>
+      <div className='flex md:flex-row flex-col'>
 
           <div className=''>
               <Navbar />

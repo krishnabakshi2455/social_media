@@ -10,7 +10,7 @@ import { NavLink } from 'react-router-dom';
 
 const MobileNav = () => {
   return (
-    <div className='fixed bottom-0 p-2 w-full border-t-2'>
+    <div className='fixed bottom-0 left-0 p-2 w-full border-t-2'>
           <div className='flex flex-row justify-around items-center w-full ' >
 
 

@@ -1,4 +1,5 @@
-import ContentContainer from "@/components/contentcontainer/ContentContainer"
+import Authentication from "@/components/authentication/Authentication"
+// import ContentContainer from "@/components/contentcontainer/ContentContainer"
 
 
 
@@ -7,7 +8,8 @@ function App() {
 
   return (
     <>
-      <ContentContainer />
+      {/* <ContentContainer /> */}
+      <Authentication/>
       {/* {
         SingUppassword && SingUppassword && LoginEmail && Loginpassword ? <Home /> : <Authentication />
       } */}

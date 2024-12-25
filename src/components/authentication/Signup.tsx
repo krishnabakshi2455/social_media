@@ -2,6 +2,7 @@ import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { Button } from "@/components/ui/button"
+
 import {
     Form,
     FormControl,
@@ -37,6 +38,40 @@ const SignUp = () => {
 
     function onSubmit(values: z.infer<typeof formSchema>) {
         console.log(values)
+        const username=values.username
+        const useremail = values.useremail
+        const userpassword = values.userpassword
+
+        const url = import.meta.env.VITE_BACKEND_URL + "/signup";
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ username, useremail, userpassword }),
+        })
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+
+                // Attempt to parse JSON response
+                return response.text().then((text) => {
+                    try {
+                        return JSON.parse(text); // If valid JSON, return parsed object
+                    } catch {
+                        return text; // Otherwise, return raw text
+                    }
+                });
+            })
+            .then((data) => {
+                console.log('Success:', data);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+
+        
         toast.success('SignUp Succesfull')
         // toast('✅ SignUp Succesfull')
     }

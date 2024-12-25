@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 
 const Authentication: React.FC = () => {
 
-  const [actvie, setactvie] = useState("login")
+  const [actvie, setactvie] = useState("signup")
 
   const handlechange = () => {
     if (actvie === "login") {
@@ -18,7 +18,7 @@ const Authentication: React.FC = () => {
   return (
     <>
       <div className="">
-        <div className="">
+        <div className="flex flex-col items-center">
           {actvie === 'login' ? <Login /> : <SignUp />}
 
           <div className="ml-8">
